@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
     const { username, password } = await req.json()
 
     // Call the backend login endpoint
-    const response = await fetch("http://mai-six.vercel.app/login", {
+    const response = await fetch("https://mai-2-33v6.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
