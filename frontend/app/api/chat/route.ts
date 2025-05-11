@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Connect to your FastAPI backend
-    const response = await fetch("http://localhost:8000/chat", {
+    const response = await fetch("http://mai-six.vercel.app/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
