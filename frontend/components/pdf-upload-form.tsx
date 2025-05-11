@@ -57,7 +57,7 @@ export function PdfUploadForm({ onSuccess }: PdfUploadFormProps) {
       formData.append("file", file)
 
       // Use direct fetch to backend
-      const response = await authFetch("http://localhost:8000/process-pdf", {
+      const response = await authFetch("http://mai-six.vercel.app/process-pdf", {
         method: "POST",
         body: formData,
       })
