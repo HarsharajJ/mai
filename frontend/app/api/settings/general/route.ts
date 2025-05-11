@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
     const sessionCookie = req.cookies.get("session_id")
 
     // Call the Python backend to save general settings
-    const response = await fetch("http://mai-six.vercel.app/settings/general", {
+    const response = await fetch("https://mai-2-33v6.onrender.com/settings/general", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
