@@ -34,7 +34,7 @@ export default function SettingsPage() {
   useEffect(() => {
     async function fetchSettings() {
       try {
-        const response = await authFetch("http://mai-six.vercel.app/settings")
+        const response = await authFetch("https://mai-2-33v6.onrender.com/settings")
         if (!response.ok) {
           throw new Error("Failed to fetch settings")
         }
@@ -73,7 +73,7 @@ export default function SettingsPage() {
   const saveGeneralSettings = async () => {
     setIsLoading(true)
     try {
-      const response = await authFetch("http://mai-six.vercel.app/settings/general", {
+      const response = await authFetch("https://mai-2-33v6.onrender.com/settings/general", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ export default function SettingsPage() {
   const saveApiKeys = async () => {
     setIsLoading(true)
     try {
-      const response = await authFetch("http://mai-six.vercel.app/settings/api-keys", {
+      const response = await authFetch("https://mai-2-33v6.onrender.com/settings/api-keys", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -140,7 +140,7 @@ export default function SettingsPage() {
   const saveAdvancedSettings = async () => {
     setIsLoading(true)
     try {
-      const response = await authFetch("http://mai-six.vercel.app/settings/advanced", {
+      const response = await authFetch("https://mai-2-33v6.onrender.com/settings/advanced", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
