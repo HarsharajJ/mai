@@ -18,7 +18,7 @@ app = FastAPI()
 # Update the CORS middleware configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Your Next.js app URL
+    allow_origins=["http://mai-six.vercel.app"],  # Your Next.js app URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
