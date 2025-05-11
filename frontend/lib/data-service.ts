@@ -45,7 +45,7 @@ export type RecentActivity = Array<{
 export async function getUrls(): Promise<Url[]> {
   try {
     // Use direct fetch to the backend API
-    const response = await authFetch("http://localhost:8000/urls")
+    const response = await authFetch("http://mai-six.vercel.app/urls")
 
     if (!response.ok) {
       console.error("Failed to fetch URLs:", response.statusText)
@@ -61,7 +61,7 @@ export async function getUrls(): Promise<Url[]> {
 
 export async function deleteUrl(id: string): Promise<boolean> {
   try {
-    const response = await authFetch(`http://localhost:8000/urls/${id}`, {
+    const response = await authFetch(`http://mai-six.vercel.app/urls/${id}`, {
       method: "DELETE",
     })
 
@@ -74,7 +74,7 @@ export async function deleteUrl(id: string): Promise<boolean> {
 
 export async function getPdfs(): Promise<Pdf[]> {
   try {
-    const response = await authFetch("http://localhost:8000/pdfs")
+    const response = await authFetch("http://mai-six.vercel.app/pdfs")
 
     if (!response.ok) {
       console.error("Failed to fetch PDFs:", response.statusText)
@@ -90,7 +90,7 @@ export async function getPdfs(): Promise<Pdf[]> {
 
 export async function deletePdf(id: string): Promise<boolean> {
   try {
-    const response = await authFetch(`http://localhost:8000/pdfs/${id}`, {
+    const response = await authFetch(`http://mai-six.vercel.app/pdfs/${id}`, {
       method: "DELETE",
     })
 
@@ -103,7 +103,7 @@ export async function deletePdf(id: string): Promise<boolean> {
 
 export async function getDashboardStats(): Promise<DashboardStats> {
   try {
-    const response = await authFetch("http://localhost:8000/stats")
+    const response = await authFetch("http://mai-six.vercel.app/stats")
 
     if (!response.ok) {
       console.error("Failed to fetch dashboard stats:", response.statusText)
@@ -151,7 +151,7 @@ export async function getDashboardStats(): Promise<DashboardStats> {
 
 export async function getRecentActivity(): Promise<RecentActivity> {
   try {
-    const response = await authFetch("http://localhost:8000/activity")
+    const response = await authFetch("http://mai-six.vercel.app/activity")
 
     if (!response.ok) {
       console.error("Failed to fetch recent activity:", response.statusText)
