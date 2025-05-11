@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     backendFormData.append("file", file)
 
     // Call the Python backend to process the PDF
-    const response = await fetch("http://mai-six.vercel.app/process-pdf", {
+    const response = await fetch("https://mai-2-33v6.onrender.com/process-pdf", {
       method: "POST",
       headers: {
         Cookie: sessionCookie ? `session_id=${sessionCookie.value}` : "",
@@ -54,7 +54,7 @@ export async function GET(req: NextRequest) {
     const sessionCookie = req.cookies.get("session_id")
 
     // Call the Python backend to get all PDFs
-    const response = await fetch("http://mai-six.vercel.app/pdfs", {
+    const response = await fetch("https://mai-2-33v6.onrender.com/pdfs", {
       headers: {
         Cookie: sessionCookie ? `session_id=${sessionCookie.value}` : "",
       },
@@ -85,7 +85,7 @@ export async function DELETE(req: NextRequest) {
     const sessionCookie = req.cookies.get("session_id")
 
     // Call the Python backend to delete the PDF
-    const response = await fetch(`http://mai-six.vercel.app/pdfs/${id}`, {
+    const response = await fetch(`https://mai-2-33v6.onrender.com/pdfs/${id}`, {
       method: "DELETE",
       headers: {
         Cookie: sessionCookie ? `session_id=${sessionCookie.value}` : "",
