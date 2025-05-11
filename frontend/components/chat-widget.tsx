@@ -103,7 +103,7 @@ export default function ChatWidget() {
     <div className="flex flex-col h-full border rounded-md overflow-hidden bg-white">
       <div className="bg-primary text-primary-foreground p-3 font-semibold flex items-center gap-2">
         <Bot size={18} />
-        <span>Company Assistant</span>
+        <span>MTL Chatbot</span>
       </div>
 
       <div className="flex-grow overflow-y-auto p-4 space-y-4">
