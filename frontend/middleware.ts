@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {
 
     try {
       // Verify the session with the backend
-      const response = await fetch("http://mai-six.vercel.app/auth/status", {
+      const response = await fetch("https://mai-2-33v6.onrender.com/auth/status", {
         headers: {
           Cookie: `session_id=${sessionCookie.value}`,
         },
