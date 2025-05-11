@@ -37,7 +37,7 @@ export function AddUrlForm({ onSuccess }: AddUrlFormProps) {
     setIsLoading(true)
 
     try {
-      const response = await authFetch("http://localhost:8000/process-url", {
+      const response = await authFetch("http://mai-six.vercel.app/process-url", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
