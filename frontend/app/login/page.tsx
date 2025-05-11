@@ -24,7 +24,7 @@ export default function LoginPage() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await authFetch("http://mai-six.vercel.app/auth/status")
+        const response = await authFetch("https://mai-2-33v6.onrender.com/auth/status")
 
         if (response.ok) {
           // Already authenticated, redirect to dashboard
@@ -47,7 +47,7 @@ export default function LoginPage() {
 
     try {
       // Direct fetch to backend to avoid Next.js API route
-      const response = await fetch("http://mai-six.vercel.app/login", {
+      const response = await fetch("https://mai-2-33v6.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
