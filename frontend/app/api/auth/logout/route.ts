@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
     const sessionCookie = req.cookies.get("session_id")
 
     // Call the backend logout endpoint
-    const response = await fetch("http://mai-six.vercel.app/logout", {
+    const response = await fetch("https://mai-2-33v6.onrender.com/logout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
