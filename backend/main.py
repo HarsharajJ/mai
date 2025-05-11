@@ -13,16 +13,37 @@ import secrets
 import base64
 from data_processor import DataProcessor, Chatbot
 
+# Initialize FastAPI app
 app = FastAPI()
 
-# Update the CORS middleware configuration
+# Configure CORS based on environment
+origins = [
+    "https://mai-six.vercel.app",
+    "http://localhost:3000",  # For local development
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://mai-six.vercel.app"],  # Your Next.js app URL
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"]
 )
+
+# Explicit OPTIONS handler for all paths
+@app.options("/{path:path}")
+async def options_handler(request: Request, path: str):
+    return Response(
+        status_code=status.HTTP_200_OK,
+        headers={
+            "Access-Control-Allow-Origin": request.headers.get("Origin", ""),
+            "Access-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
+            "Access-Control-Allow-Headers": "*",
+            "Access-Control-Allow-Credentials": "true",
+            "Access-Control-Max-Age": "86400",
+        }
+    )
 
 # Initialize the data processor and chatbot
 data_processor = DataProcessor()
@@ -228,16 +249,15 @@ async def login(request: LoginRequest, response: Response):
             key="session_id",
             value=session_id,
             httponly=True,
-            max_age=3600,  # 1 hour
-            samesite="lax",
-            secure=False,  # Set to True in production with HTTPS
+            max_age=3600,
+            samesite="none",
+            secure=True,
         )
         return {"success": True, "message": "Login successful"}
     else:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect username or password",
-            headers={"WWW-Authenticate": "Bearer"},
         )
 
 # Logout endpoint
