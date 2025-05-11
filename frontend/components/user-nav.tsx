@@ -25,7 +25,7 @@ export function UserNav() {
     setIsLoading(true)
     try {
       // Direct fetch to backend to avoid Next.js API route
-      const response = await authFetch("http://localhost:8000/logout", {
+      const response = await authFetch("http://mai-six.vercel.app/logout", {
         method: "POST",
       })
 
