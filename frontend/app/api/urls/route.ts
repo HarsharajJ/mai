@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     const sessionCookie = req.cookies.get("session_id")
 
     // Call the Python backend to process the URL
-    const response = await fetch("http://mai-six.vercel.app/process-url", {
+    const response = await fetch("https://mai-2-33v6.onrender.com/process-url", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export async function GET(req: NextRequest) {
     const sessionCookie = req.cookies.get("session_id")
 
     // Call the Python backend to get all URLs
-    const response = await fetch("http://mai-six.vercel.app/urls", {
+    const response = await fetch("https://mai-2-33v6.onrender.com/urls", {
       headers: {
         Cookie: sessionCookie ? `session_id=${sessionCookie.value}` : "",
       },
@@ -78,7 +78,7 @@ export async function DELETE(req: NextRequest) {
     const sessionCookie = req.cookies.get("session_id")
 
     // Call the Python backend to delete the URL
-    const response = await fetch(`http://mai-six.vercel.app/urls/${id}`, {
+    const response = await fetch(`https://mai-2-33v6.onrender.com/urls/${id}`, {
       method: "DELETE",
       headers: {
         Cookie: sessionCookie ? `session_id=${sessionCookie.value}` : "",
