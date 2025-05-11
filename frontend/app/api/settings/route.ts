@@ -6,7 +6,7 @@ export async function GET(req: NextRequest) {
     const sessionCookie = req.cookies.get("session_id")
 
     // Call the Python backend to get settings
-    const response = await fetch("http://mai-six.vercel.app/settings", {
+    const response = await fetch("https://mai-2-33v6.onrender.com/settings", {
       headers: {
         Cookie: sessionCookie ? `session_id=${sessionCookie.value}` : "",
       },
