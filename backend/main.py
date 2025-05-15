@@ -63,7 +63,7 @@ settings = {
         "debugMode": False
     },
     "api_keys": {
-        "groqApiKey": os.environ.get("GROQ_API_KEY", "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"),
+        "groqApiKey": os.environ.get("GROQ_API_KEY", "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"),
         "cohereApiKey": os.environ.get("COHERE_API_KEY", "R8KB9BMGC7CftCAt1TLHgu9os1NZjieGhsE3j0oI")
     },
     "advanced": {
