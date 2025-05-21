@@ -16,7 +16,7 @@ import uuid
 from datetime import datetime
 
 # Initialize APIs with default keys
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "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")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "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")
 COHERE_API_KEY = os.environ.get("COHERE_API_KEY", "R8KB9BMGC7CftCAt1TLHgu9os1NZjieGhsE3j0oI")
 
 # Configuration
